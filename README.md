@@ -1,7 +1,7 @@
 # lg_project
 
 이 프로젝트의 파일은 파이썬 virtual environment에서 구현하였습니다.\
-source myvenv/Scripts/activate
+source venv/Scripts/activate
 또는
 ovencv를 install 해주세요.
 
