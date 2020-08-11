@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-from matplotlib import pyplot as plt
 
 capture = cv2.VideoCapture(0)
 capture.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
