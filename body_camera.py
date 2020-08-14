@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 try:
-	capture = cv2.VideoCapture(0)
+	capture = cv2.VideoCapture(1)
 except:
 	print('카메라로딩실패')
 	
@@ -16,15 +16,12 @@ face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades+'./haarcascade_fronta
 while True:
 	ret, frame = capture.read()
 	grayImage = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-	upperbody = upperbody_cascade.detectMultiScale(grayImage, 1.01, 10)
-	face = face_cascade.detectMultiScale(grayImage, 1.01, 10)
+	face = face_cascade.detectMultiScale(grayImage, 1.19, 3)
+	upperbody = upperbody_cascade.detectMultiScale(grayImage, 1.19, 3)
 	for (x,y,w,h) in face:
 		cv2.rectangle(frame,(x,y),(x+w,y+h),(0,0,255),3)
-		
 	for (x,y,w,h) in upperbody:
 		cv2.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),3)
-		
-		
 	cv2.imshow('VideoFrame',frame)
 	if cv2.waitKey(1) > 0: break
 	
