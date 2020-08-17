@@ -10,3 +10,6 @@ ovencv를 install 해주세요.
 
 2. camera.py
 노트북 camera test (q 누르면 종료됩니다.)
+
+yolo-coco 이미지 다운받기
+https://drive.google.com/drive/folders/1BHfQqhMwy0gmAhjDA_JBW8ynEuL-WXFp?usp=sharing
